@@ -1,0 +1,12 @@
+<% if logged_in? %>
+  <nav>
+    <%= link_to "Task list", tasks_path %>
+    <%= link_to "Member Information", user_path(current_user) %>
+    <%= link_to "Log out", session_path(current_user.id), method: :delete %>
+  </nav>
+<% else %>
+  <nav>
+    <%= link_to "Login", new_session_path %>
+    <%= link_to "Member Registration", new_user_path %>
+  </nav>
+<% end %>

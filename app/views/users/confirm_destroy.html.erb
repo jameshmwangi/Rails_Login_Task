@@ -1,0 +1,19 @@
+<h1>Unsubscribe Page</h1>
+
+<p>
+  <strong>username:</strong>
+  <%= @user.username %>
+</p>
+
+<p>
+  <strong>Email address:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>age:</strong>
+  <%= @user.age %>
+</p>
+
+<%= link_to "Back", user_path(@user) %>
+<%= button_to "Delete", user_path(@user), method: :delete %>

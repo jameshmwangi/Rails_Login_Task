@@ -1,0 +1,21 @@
+<h1>Login Page</h1>
+
+<% if flash[:danger] %>
+  <p style="color: red;"><%= flash[:danger] %></p>
+<% end %>
+
+<%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
+  <div class="field">
+    <%= f.label :email, "Email address" %>
+    <%= f.email_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, "Password" %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Login" %>
+  </div>
+<% end %>
